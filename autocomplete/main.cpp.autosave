@@ -1,0 +1,61 @@
+#include<iostream>
+#include<string.h>
+#include<string>
+
+using namespace std;
+
+// ticomplete cursor comando argumentos
+
+void ajustArgs(vector<string>& a)
+
+
+int main(int argc, char** argv){
+	if ( argc < 2 )
+		return 0;
+
+	string cur = argv[1];
+	if ( argc == 3 ){
+		cout << "from/\nto/\n";
+	} else if ( argc == 4 ){
+		string prep;
+		prep = "from";
+		if ( prep.find(cur) == 0 ){
+			cout << prep << " \n";
+		} 
+		prep = "to";
+		if ( prep.find(cur) == 0 ){
+			cout << prep << " \n";
+		} 
+	} else if ( cur[0] == '@' ){
+		string aux;
+		aux = "@Node:";
+		if ( aux.find(cur) == 0 ){
+			cout << aux << "\n";
+		} 
+		aux = "@File:";
+		if ( aux.find(cur) == 0 ){
+			cout << aux << "\n";
+		} 
+		aux = "@Folder:";
+		if ( aux.find(cur) == 0 ){
+			cout << aux << "\n";
+		} 
+		aux = "@File:Image:";
+		if ( aux.find(cur) == 0 ){
+			cout << aux << "\n";
+		} 
+	} /*else {
+		cout << cur << endl;
+	}*/
+
+	
+
+
+
+	/*cout << argc << endl;
+	cout << "c:" << cur << endl;
+	for (int i=2; i<argc; i++){
+		cout << argv[i] << endl;
+	}*/
+	return 0;
+}
