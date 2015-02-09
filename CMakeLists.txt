@@ -8,7 +8,7 @@ project (TiArg)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++0x -O2")
 
-add_library (tiarg src/tiarg.cpp)
+add_library (tiarg SHARED src/tiarg.cpp)
 #add_executable (tiarg.complete src-bin/tiarg-complete.cpp) 
 
 
