@@ -20,6 +20,7 @@ void getArgs(TiObj& out, int argc, char** argv){
 	out.clear();
 	string akk;
 	int i,j, len, i_akk=0;
+
 	for (i=1; i<argc; i++){
 		if ( isPrep(prep, argv[i]) ){
 			i_akk=0;
@@ -42,18 +43,18 @@ void getArgs(TiObj& out, int argc, char** argv){
 					aux += " ";
 					more = true;
 				} else {
-					if ( more ){						
+					if ( more ){
 						aux += argv[j];
 						more = false;
-					} else						
+					} else
 						break;
 				} 
 			}
 			i = j-1;
-			out[prep] = aux;
+			out.set(prep,aux);
 		} else {
 
-			if ( i_akk > 0 ){				
+			if ( i_akk > 0 ){
 				akk += ",";
 				akk += argv[i];
 				i_akk += 1;
@@ -64,5 +65,5 @@ void getArgs(TiObj& out, int argc, char** argv){
 		}
 	}
 	if ( akk != "" )
-		out["_Akk"] = akk;
+		out.set("_Akk",akk);
 }
