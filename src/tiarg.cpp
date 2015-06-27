@@ -1,8 +1,10 @@
 #include "tiarg.hpp"
 #include <string.h>
 
+using namespace std;
 
-bool isPrep(string& out, string str){
+
+bool isPrep(std::string& out, std::string str){
 	static string STD_PREP[]={"of","to","from","where"};
 	for (int i=0; i<4; i++){
 		if ( str == STD_PREP[i] ){
