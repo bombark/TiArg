@@ -2,6 +2,9 @@
 #include <string.h>
 
 
+using namespace std;
+
+
 bool isPrep(string& out, string str){
 	static string STD_PREP[]={"of","to","from","where"};
 	for (int i=0; i<4; i++){
