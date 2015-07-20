@@ -26,7 +26,7 @@ _store () {
 	COMPREPLY=( $values );
 	IFS=$saveIFS;
 }
-complete -o nospace -F _store store
+complete -o nospace -F _store $1
 
 
 
