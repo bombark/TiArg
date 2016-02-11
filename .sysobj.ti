@@ -1,0 +1,4 @@
+class=proj:cpp:lib
+name="libtiarg"
+description="    Library to handle the parameters"
+Depend{name="libtiobj"}
